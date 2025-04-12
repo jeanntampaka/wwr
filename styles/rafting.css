@@ -574,7 +574,7 @@ footer img {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('images/rafting-hero.jpg'); /* Replace with your own image */
+    background-image: url("images/rafting-hero.jpg"); /* Replace with your own image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -591,8 +591,8 @@ footer img {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
     z-index: 1;
+    background-image: url("images/rafting-hero.jpg");
 }
 
 .banner-content {
@@ -659,11 +659,7 @@ footer img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.2)
-      ),
-      url('images/rafting-hero.jpg'); /* Move the background image here */
+    background-image: url('images/rafting-hero.jpg'); /* Move the background image here */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -729,3 +725,246 @@ footer img {
       font-size: 1rem;
     }
   }
+
+  /* ===== TRIPS PAGE SPECIFIC STYLES ===== */
+
+/* Full Width Hero */
+.full-width-hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    position: relative;
+    max-height: 60vh;
+    overflow: hidden;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    width: 90%;
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    background-color: var(--accent1-color);
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+}
+
+.signup-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.signup-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.signup-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Featured Trips */
+.featured-trips {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-trips h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.trip-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-content {
+    padding: 1.5rem;
+}
+
+.trip-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.trip-details {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.trip-details li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Trip Comparison Table */
+.trip-comparison {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trip-comparison h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-text {
+        width: 95%;
+    }
+    
+    .signup-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Hero Call to Action */
+.hero-cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero-cta-button:hover {
+    background-color: #e65c00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .hero-cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
